@@ -1,0 +1,18 @@
+<html>
+    <body>
+
+    <h1><a>Detalles</a></h1> 
+    
+    <div>  
+        <h2><a>Título: {{ libro.titulo }}</a></h2>
+        <p>Descripción: {{ libro.descripcion|linebreaksbr }}</p> 
+        <p>Autor: {{ libro.autor }}</p>
+        <p>Valoracion: {{ libro.valoracion }}</p>
+    </div>
+  
+ <div>
+    <a href="{% url 'libros_list' %}">Lista de libros</a><br>
+    <a href="{%  url 'edita' pk=libro.pk %}">Edita este libro</a>
+</div>
+</body>
+</html>

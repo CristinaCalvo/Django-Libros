@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libro</title>
+</head>
+<body>
+    <h1>Editar libro</h1>
+
+    <form action="{%  url 'edita' pk=libros.pk %}" method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">Editar libro</button><br>
+    </form>
+    
+    <button><a href=" {%  url 'libros_list' %} ">Volver a listado</a></button>
+</body>
+</html>
